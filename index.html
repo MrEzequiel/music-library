@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Lato:wght@100;400;700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+    <title>Music Library Page</title>
+  </head>
+  <body>
+    <div class="side-bar-overlay">
+      <div class="side-bar">
+        <span class="material-icons close"> close </span>
+        <div class="library-icons">
+          <p>
+            <span class="material-icons"> public </span>
+            Overview
+          </p>
+          <p>
+            <span class="material-icons"> article </span>
+            News
+          </p>
+          <p>
+            <span class="material-icons"> audiotrack </span>
+            Playlists
+          </p>
+          <p>
+            <span class="material-icons"> podcasts </span>
+            Discover
+          </p>
+        </div>
+        <div class="divider"></div>
+        <div class="account">
+          <p>
+            <span class="material-icons"> stacked_bar_chart </span>
+            Dashboard
+          </p>
+          <p>
+            <span class="material-icons"> chat_bubble </span>
+            Message
+          </p>
+          <p>
+            <span class="material-icons"> notifications </span>
+            Notifications
+          </p>
+          <p>
+            <span class="material-icons"> person </span>
+            Account
+          </p>
+        </div>
+      </div>
+    </div>
+    <header>
+      <button type="button">
+        <span class="material-icons"> search </span>
+      </button>
+      <input type="text" placeholder="Search artists, playlist or tracks" />
+    </header>
+
+    <main>
+      <section id="featured-playlists">
+        <h2>Featured Playlists</h2>
+        <div class="playlists-container">
+          <div class="playlist">
+            <div class="image-playlist">
+              <img src="./assets/playlist1.jpg" alt="playlist1" />
+            </div>
+            <div class="playlist-info">
+              <h3>Only STARDUST</h3>
+              <p>24 tracks</p>
+            </div>
+          </div>
+
+          <div class="playlist">
+            <div class="image-playlist">
+              <img src="./assets/playlist2.jpg" alt="playlist1" />
+            </div>
+            <div class="playlist-info">
+              <h3>Mike Vella</h3>
+              <p>12 tracks</p>
+            </div>
+          </div>
+
+          <div class="playlist">
+            <div class="image-playlist">
+              <img src="./assets/playlist3.jpg" alt="playlist1" />
+            </div>
+            <div class="playlist-info">
+              <h3>the best singles s2</h3>
+              <p>163 tracks</p>
+            </div>
+          </div>
+
+          <div class="playlist">
+            <div class="image-playlist">
+              <img src="./assets/playlist4.jpg" alt="playlist1" />
+            </div>
+            <div class="playlist-info">
+              <h3>Indie</h3>
+              <p>138 tracks</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="social">
+        <div class="profiles-container">
+          <h2>Profile Views</h2>
+          <div class="profile">
+            <div class="profile-image">
+              <img src="./assets/view1.jpg" alt="profile1" />
+            </div>
+            <div class="profile-info">
+              <h3>Jenny Villa</h3>
+              <p>1 day ago</p>
+            </div>
+            <div class="albuns">
+              <p>4 albums</p>
+            </div>
+          </div>
+
+          <div class="profile">
+            <div class="profile-image">
+              <img src="./assets/view2.jpg" alt="profile2" />
+            </div>
+            <div class="profile-info">
+              <h3>Aquila</h3>
+              <p>3 days ago</p>
+            </div>
+            <div class="albuns">
+              <p>2 albums</p>
+            </div>
+          </div>
+
+          <div class="profile">
+            <div class="profile-image">
+              <img src="./assets/view3.jpg" alt="profile3" />
+            </div>
+            <div class="profile-info">
+              <h3>This is War</h3>
+              <p>2 week ago</p>
+            </div>
+            <div class="albuns">
+              <p>5 albums</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="tracks-container">
+          <h3>Tracks</h3>
+          <div class="tracks-overflow">
+            <div class="track">
+              <div class="image-track">
+                <img src="./assets/track1.jpg" alt="track1" />
+              </div>
+              <div class="descriptions-track">
+                <h4>Mahana Bon</h4>
+                <p>Sexy in Paris</p>
+              </div>
+            </div>
+
+            <div class="track">
+              <div class="image-track">
+                <img src="./assets/track2.jpg" alt="track2" />
+              </div>
+              <div class="descriptions-track">
+                <h4>Donna</h4>
+                <p>Pseudo-Life</p>
+              </div>
+            </div>
+
+            <div class="track">
+              <div class="image-track">
+                <img src="./assets/track3.jpg" alt="track3" />
+              </div>
+              <div class="descriptions-track">
+                <h4>Avven</h4>
+                <p>Magic</p>
+              </div>
+            </div>
+
+            <div class="track">
+              <div class="image-track">
+                <img src="./assets/track4.jpg" alt="track4" />
+              </div>
+              <div class="descriptions-track">
+                <h4>Cony Matt</h4>
+                <p>Do Rock</p>
+              </div>
+            </div>
+
+            <div class="track">
+              <div class="image-track">
+                <img src="./assets/track5.jpg" alt="track5" />
+              </div>
+              <div class="descriptions-track">
+                <h4>Claudia Cany</h4>
+                <p>Lorem ipsum dolor.</p>
+              </div>
+            </div>
+
+            <div class="track">
+              <div class="image-track">
+                <img src="./assets/track6.jpg" alt="track6" />
+              </div>
+              <div class="descriptions-track">
+                <h4>Samm</h4>
+                <p>Lorem ipsum dolor.</p>
+              </div>
+            </div>
+
+            <div class="track">
+              <div class="image-track">
+                <img src="./assets/track7.jpg" alt="track7" />
+              </div>
+              <div class="descriptions-track">
+                <h4>Pacify</h4>
+                <p>Lorem ipsum dolor.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer id="user-profile">
+      <div class="user-profile-container">
+        <div class="image-user">
+          <img src="./assets/profile1.jpg" alt="profile1" />
+        </div>
+        <div class="user-info">
+          <h3>Ezequiel Soares</h3>
+          <p>
+            Edit profile
+            <span class="material-icons"> settings </span>
+          </p>
+        </div>
+        <div class="open-menu">
+          <span class="material-icons open-menu-button"> menu_open </span>
+        </div>
+      </div>
+    </footer>
+
+    <script src="./main.js"></script>
+  </body>
+</html>

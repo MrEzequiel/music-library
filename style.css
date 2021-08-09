@@ -1,0 +1,401 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  font-size: 63.5%;
+}
+
+a {
+  text-decoration: none;
+  color: #e5e5e5e7;
+}
+
+input,
+button {
+  outline: none;
+  border: none;
+}
+
+img {
+  width: 100%;
+}
+
+body {
+  font: 400 1.6rem 'Lato', sans-serif;
+  background: linear-gradient(to right, #101228, #1e1733);
+  color: #e5e5e5e7;
+}
+
+.side-bar-overlay {
+  position: fixed;
+  top: 0;
+  z-index: 99;
+  background: #010208b0;
+  width: 100%;
+  height: 100vh;
+
+  opacity: 0;
+  visibility: hidden;
+
+  transition: all 500ms;
+}
+.side-bar-overlay.show {
+  opacity: 1;
+  visibility: visible;
+}
+
+.side-bar {
+  position: relative;
+  width: min(25rem, 80%);
+  height: 100vh;
+  border: 1rem solid #040517;
+  background: #06001a;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.side-bar .close {
+  cursor: pointer;
+  position: absolute;
+  top: 0;
+  right: 1rem;
+  font-size: 4rem;
+
+  transition: transform 250ms;
+}
+.side-bar .close:hover {
+  color: #2a1472;
+  transform: rotate(90deg);
+}
+
+.side-bar .library-icons,
+.side-bar .account {
+  width: 50%;
+
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+
+  gap: 0.75rem;
+}
+.side-bar .library-icons p,
+.side-bar .account p {
+  cursor: pointer;
+  color: #e5e5e569;
+  display: flex;
+  align-items: center;
+
+  gap: 1rem;
+}
+
+.side-bar .library-icons p:hover,
+.side-bar .account p:hover {
+  color: #fff;
+}
+
+.side-bar .library-icons p:first-child {
+  color: #fff;
+}
+
+.side-bar .divider {
+  margin: 2rem auto;
+  width: 60%;
+  background: #e5e5e544;
+  height: 0.25rem;
+}
+
+header {
+  align-items: center;
+
+  padding: 2rem;
+  gap: 2rem;
+}
+
+header button {
+  background: transparent;
+}
+
+header button span {
+  font-size: 1.8rem;
+  color: #e5e5e5e7;
+}
+
+header input {
+  font-size: 1.8rem;
+  width: 70%;
+  color: #e5e5e5e7;
+  background: transparent;
+}
+
+main {
+  padding: 0 3rem;
+  margin: 4rem 0;
+}
+
+main #featured-playlists {
+  margin-bottom: 6rem;
+}
+
+#featured-playlists h2 {
+  font-size: 3rem;
+  margin-bottom: 2rem;
+}
+
+#featured-playlists .playlists-container {
+  display: flex;
+  gap: 2rem;
+
+  overflow: auto;
+}
+
+.playlists-container::-webkit-scrollbar-track {
+  box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+  background-color: #1c1631;
+  border-radius: 10px;
+}
+
+.playlists-container::-webkit-scrollbar {
+  width: 0.5rem;
+  background-color: #1c1631;
+}
+
+.playlists-container::-webkit-scrollbar-thumb {
+  border-radius: 1rem;
+  background: #200f56;
+}
+
+.playlists-container .playlist {
+  width: 40rem;
+  height: 40rem;
+}
+
+.playlist .image-playlist {
+  cursor: pointer;
+  width: 40rem;
+  height: 80%;
+
+  margin-bottom: 1rem;
+
+  object-fit: cover;
+}
+
+.playlist .image-playlist img {
+  border-radius: 1rem;
+  width: 100%;
+  height: 100%;
+
+  transition: transform 300ms;
+}
+
+.playlist .image-playlist:hover img {
+  transform: scale(0.95);
+}
+
+.playlist .image-playlist:active img {
+  transform: scale(1);
+}
+
+.playlist .playlist-info h3 {
+  margin-bottom: 0.5rem;
+}
+
+.playlist .playlist-info h3:hover,
+.playlist .playlist-info p:hover {
+  color: #fff;
+}
+
+#social .profiles-container {
+  width: min(80rem, 100%);
+
+  margin-bottom: 4rem;
+}
+
+.profiles-container h2 {
+  margin-bottom: 2rem;
+}
+
+.profiles-container .profile {
+  width: 100%;
+
+  display: flex;
+  gap: 2rem;
+  align-items: center;
+  justify-content: space-between;
+
+  margin-bottom: 2rem;
+}
+
+.profiles-container .profile:hover .profile-image img {
+  filter: brightness(110%);
+}
+
+.profiles-container .profile:last-child {
+  margin-bottom: 0;
+}
+
+.profile .profile-image {
+  display: flex;
+  width: 8rem;
+  height: 8rem;
+}
+
+.profile-image img {
+  cursor: pointer;
+  filter: brightness(80%);
+  border-radius: 1rem;
+  object-fit: cover;
+  height: 100%;
+
+  transition: filter 250ms;
+}
+
+.profile .profile-info {
+  display: flex;
+  flex-direction: column;
+  text-align: left;
+  width: 50%;
+}
+
+.profile .profile-info h3 {
+  cursor: pointer;
+  display: inline-block;
+}
+.profile .profile-info p {
+  display: inline-block;
+  color: rgb(143, 143, 143);
+}
+
+.profile .profile-info h3:hover,
+.profile .profile-info p:hover {
+  color: #fff;
+}
+
+.profile .albuns {
+  text-align: right;
+  width: 30%;
+}
+
+.tracks-container h3 {
+  font-size: 2.5rem;
+  margin-bottom: 2rem;
+}
+
+.tracks-container .tracks-overflow {
+  display: flex;
+  gap: 2rem;
+
+  overflow: auto;
+}
+
+.tracks-overflow::-webkit-scrollbar-track {
+  box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+  background-color: #1c1631;
+  border-radius: 10px;
+}
+
+.tracks-overflow::-webkit-scrollbar {
+  width: 0.5rem;
+  background-color: #1c1631;
+}
+
+.tracks-overflow::-webkit-scrollbar-thumb {
+  border-radius: 1rem;
+  background: #200f56;
+}
+
+.tracks-overflow .track {
+  width: 15rem;
+  height: 20rem;
+}
+
+.tracks-overflow .track:hover .image-track img {
+  filter: brightness(110%);
+}
+
+.track .image-track {
+  cursor: pointer;
+  width: 15rem;
+  height: 50%;
+
+  margin-bottom: 2rem;
+}
+
+.track .image-track img {
+  filter: brightness(80%);
+  border-radius: 1rem;
+  height: 100%;
+  object-fit: cover;
+  transition: filter 300ms;
+}
+
+.track .descriptions-track h4:hover,
+.track .descriptions-track p:hover {
+  color: #fff;
+}
+
+#user-profile {
+  background: #06001a;
+}
+
+#user-profile .user-profile-container {
+  height: 20rem;
+
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+  justify-content: space-between;
+
+  padding: 0 2rem;
+}
+
+.user-profile-container .image-user {
+  width: 13rem;
+}
+
+.image-user img {
+  border-radius: 1rem;
+  object-fit: cover;
+}
+
+.user-profile-container .user-info {
+  width: 100%;
+}
+
+.user-info p {
+  cursor: pointer;
+  color: #d3d3d3e7;
+  margin-top: 1rem;
+  display: inline-flex;
+  align-items: center;
+}
+.user-info p:hover {
+  color: #fff;
+}
+.user-info p span {
+  margin-left: 0.75rem;
+}
+
+.user-profile-container .open-menu span {
+  cursor: pointer;
+  font-size: 3rem;
+}
+
+@media (min-width: 900px) {
+  #social {
+    display: flex;
+    justify-content: space-between;
+  }
+  #social .profiles-container {
+    width: 30%;
+  }
+
+  #social .tracks-container {
+    width: 50%;
+  }
+}
